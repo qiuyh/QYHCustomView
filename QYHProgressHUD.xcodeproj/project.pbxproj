@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		4BC113309AD3AADE6E14EB47 /* Pods_QYHProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C310D70D34AD7F063B12D088 /* Pods_QYHProgressHUD.framework */; };
 		7A6A9652243715ED00586065 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A9651243715ED00586065 /* AppDelegate.m */; };
-		7A6A9655243715ED00586065 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A9654243715ED00586065 /* SceneDelegate.m */; };
 		7A6A9658243715ED00586065 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A9657243715ED00586065 /* ViewController.m */; };
-		7A6A965B243715ED00586065 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A9659243715ED00586065 /* Main.storyboard */; };
 		7A6A965D243715F100586065 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A965C243715F100586065 /* Assets.xcassets */; };
 		7A6A9660243715F100586065 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A965E243715F100586065 /* LaunchScreen.storyboard */; };
 		7A6A9663243715F100586065 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A9662243715F100586065 /* main.m */; };
@@ -43,11 +41,8 @@
 		7A6A964D243715ED00586065 /* QYHProgressHUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QYHProgressHUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A6A9650243715ED00586065 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7A6A9651243715ED00586065 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7A6A9653243715ED00586065 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		7A6A9654243715ED00586065 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		7A6A9656243715ED00586065 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		7A6A9657243715ED00586065 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		7A6A965A243715ED00586065 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A6A965C243715F100586065 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A6A965F243715F100586065 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A6A9661243715F100586065 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,6 +57,8 @@
 		7A6A968A2437186300586065 /* QYHProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYHProgressHUD.m; sourceTree = "<group>"; };
 		7AA356A9243C68DA00E00BA0 /* QYHAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYHAlertView.h; sourceTree = "<group>"; };
 		7AA356AA243C68DA00E00BA0 /* QYHAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYHAlertView.m; sourceTree = "<group>"; };
+		7AFC2BA32441B555000CECF3 /* QYHHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYHHeader.h; sourceTree = "<group>"; };
+		7AFC2BA42441B6DB000CECF3 /* QYHPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYHPrefixHeader.pch; sourceTree = "<group>"; };
 		9413768F2DA1E7492F1FCB13 /* Pods-QYHProgressHUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYHProgressHUD.debug.xcconfig"; path = "Target Support Files/Pods-QYHProgressHUD/Pods-QYHProgressHUD.debug.xcconfig"; sourceTree = "<group>"; };
 		C310D70D34AD7F063B12D088 /* Pods_QYHProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QYHProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -129,11 +126,10 @@
 				7A6A96852437164400586065 /* QYHProgressHUD */,
 				7A6A9650243715ED00586065 /* AppDelegate.h */,
 				7A6A9651243715ED00586065 /* AppDelegate.m */,
-				7A6A9653243715ED00586065 /* SceneDelegate.h */,
-				7A6A9654243715ED00586065 /* SceneDelegate.m */,
+				7AFC2BA32441B555000CECF3 /* QYHHeader.h */,
+				7AFC2BA42441B6DB000CECF3 /* QYHPrefixHeader.pch */,
 				7A6A9656243715ED00586065 /* ViewController.h */,
 				7A6A9657243715ED00586065 /* ViewController.m */,
-				7A6A9659243715ED00586065 /* Main.storyboard */,
 				7A6A965C243715F100586065 /* Assets.xcassets */,
 				7A6A965E243715F100586065 /* LaunchScreen.storyboard */,
 				7A6A9661243715F100586065 /* Info.plist */,
@@ -294,7 +290,6 @@
 			files = (
 				7A6A9660243715F100586065 /* LaunchScreen.storyboard in Resources */,
 				7A6A965D243715F100586065 /* Assets.xcassets in Resources */,
-				7A6A965B243715ED00586065 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +361,6 @@
 				7A6A968B2437186300586065 /* QYHProgressHUD.m in Sources */,
 				7A6A9652243715ED00586065 /* AppDelegate.m in Sources */,
 				7A6A9663243715F100586065 /* main.m in Sources */,
-				7A6A9655243715ED00586065 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,14 +396,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7A6A9659243715ED00586065 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7A6A965A243715ED00586065 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7A6A965E243715F100586065 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -538,6 +524,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28L95LZPNF;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/QYHProgressHUD/QYHPrefixHeader.pch";
 				INFOPLIST_FILE = QYHProgressHUD/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -561,6 +549,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28L95LZPNF;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/QYHProgressHUD/QYHPrefixHeader.pch";
 				INFOPLIST_FILE = QYHProgressHUD/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

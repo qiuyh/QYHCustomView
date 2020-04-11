@@ -1,0 +1,15 @@
+//
+//  QYHPrefixHeader.pch
+//  QYHProgressHUD
+//
+//  Created by saj-king on 2020/4/11.
+//  Copyright © 2020 SAJ. All rights reserved.
+//
+
+#ifndef QYHPrefixHeader_pch
+#define QYHPrefixHeader_pch
+
+#import "QYHHeader.h"
+
+
+#endif /* QYHPrefixHeader_pch */
