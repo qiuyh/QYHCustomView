@@ -12,7 +12,7 @@
 //getCurrentTime
 #define getCurrentTime ({\
 NSDateFormatter *formatter = [[NSDateFormatter alloc] init];\
-[formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss:SS"];\
+[formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss:SSS"];\
 NSDate *datenow = [NSDate date];\
 NSString *currentTimeString = [formatter stringFromDate:datenow];\
 currentTimeString;\
@@ -99,16 +99,16 @@ tmp;\
 #define get11ProMaxScreenSize CGSizeMake(414, 896)
 
 
-#define AdaptionHeightWith5(height) height*SCREEN_HEIGHT/get5SScreenSize.height
-#define AdaptionWidthWith5(width) width*SCREEN_WIDTH/get5SScreenSize.width
+#define AdaptionHeightWith5(h) h*SCREEN_HEIGHT/get5SScreenSize.height
+#define AdaptionWidthWith5(w) w*SCREEN_WIDTH/get5SScreenSize.width
 #define AdaptionFont5(fontSize) AdaptionWidthWith5(fontSize)
 
-#define AdaptionHeightWith6(height) height*SCREEN_HEIGHT/get6SScreenSize.height
-#define AdaptionWidthWith6(width) width*SCREEN_WIDTH/get6SScreenSize.width
+#define AdaptionHeightWith6(h) h*SCREEN_HEIGHT/get6SScreenSize.height
+#define AdaptionWidthWith6(w) w*SCREEN_WIDTH/get6SScreenSize.width
 #define AdaptionFont6(fontSize) AdaptionWidthWith6(fontSize)
 
-#define AdaptionHeightWith6p(height) height*SCREEN_HEIGHT/get6PlusScreenSize.height
-#define AdaptionWidthWith6p(width) width*SCREEN_WIDTH/get6PlusScreenSize.width
+#define AdaptionHeightWith6p(h) h*SCREEN_HEIGHT/get6PlusScreenSize.height
+#define AdaptionWidthWith6p(w) w*SCREEN_WIDTH/get6PlusScreenSize.width
 #define AdaptionFont6p(fontSize) AdaptionWidthWith6p(fontSize)
 
 //BundleIdentifier

@@ -8,15 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		4BC113309AD3AADE6E14EB47 /* Pods_QYHProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C310D70D34AD7F063B12D088 /* Pods_QYHProgressHUD.framework */; };
-		7A6A9652243715ED00586065 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A9651243715ED00586065 /* AppDelegate.m */; };
-		7A6A9658243715ED00586065 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A9657243715ED00586065 /* ViewController.m */; };
-		7A6A965D243715F100586065 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A965C243715F100586065 /* Assets.xcassets */; };
-		7A6A9660243715F100586065 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A965E243715F100586065 /* LaunchScreen.storyboard */; };
-		7A6A9663243715F100586065 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A9662243715F100586065 /* main.m */; };
+		7A18F7A12444051E0036240C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A18F79C2444051E0036240C /* Assets.xcassets */; };
+		7A18F7A22444051E0036240C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A18F79D2444051E0036240C /* LaunchScreen.storyboard */; };
+		7A18F7A32444051E0036240C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A18F79F2444051E0036240C /* main.m */; };
+		7A18F7B224440C430036240C /* UIView+QYHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A18F7B124440C430036240C /* UIView+QYHExtension.m */; };
+		7A18F7B524440F580036240C /* CALayer+QYHXibBorderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A18F7B424440F580036240C /* CALayer+QYHXibBorderColor.m */; };
+		7A18F7B8244411110036240C /* UIColor+QYHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A18F7B7244411110036240C /* UIColor+QYHExtension.m */; };
+		7A18F7BE24441C790036240C /* NSDate+QYHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A18F7BD24441C790036240C /* NSDate+QYHExtension.m */; };
+		7A18F7C124444B7D0036240C /* NSString+QYHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A18F7C024444B7D0036240C /* NSString+QYHExtension.m */; };
+		7A18F7C5244458320036240C /* NSDictionary+QYHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A18F7C4244458320036240C /* NSDictionary+QYHExtension.m */; };
+		7A18F7C8244542AD0036240C /* UIViewController+QYHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A18F7C7244542AD0036240C /* UIViewController+QYHExtension.m */; };
+		7A18F7CB244543630036240C /* UIImage+QYHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A18F7CA244543630036240C /* UIImage+QYHExtension.m */; };
+		7A18F7CE244548170036240C /* NSObject+QYHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A18F7CD244548170036240C /* NSObject+QYHExtension.m */; };
+		7A18F7D1244555BF0036240C /* NSMutableAttributedString+QYHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A18F7D0244555BF0036240C /* NSMutableAttributedString+QYHExtension.m */; };
+		7A18F7DE24458BDA0036240C /* QYHProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A18F7D824458BDA0036240C /* QYHProgressHUD.m */; };
+		7A18F7DF24458BDA0036240C /* QYHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A18F7DD24458BDA0036240C /* QYHAlertView.m */; };
+		7A18F7E224458C350036240C /* QYHBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A18F7E124458C350036240C /* QYHBubbleView.m */; };
+		7A18F7E6244591500036240C /* QYHSelectedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A18F7E5244591500036240C /* QYHSelectedCell.m */; };
+		7A18F7E92445936D0036240C /* QYHSelectedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A18F7E82445936D0036240C /* QYHSelectedView.m */; };
+		7A18F7F02445AEE00036240C /* QYHPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A18F7EF2445AEE00036240C /* QYHPickerView.m */; };
+		7A5C35342443F5F900866796 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C35222443F5F900866796 /* ViewController.m */; };
+		7A5C35362443F5F900866796 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C35292443F5F900866796 /* AppDelegate.m */; };
 		7A6A966D243715F100586065 /* QYHProgressHUDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A966C243715F100586065 /* QYHProgressHUDTests.m */; };
 		7A6A9678243715F100586065 /* QYHProgressHUDUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A9677243715F100586065 /* QYHProgressHUDUITests.m */; };
-		7A6A968B2437186300586065 /* QYHProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A968A2437186300586065 /* QYHProgressHUD.m */; };
-		7AA356AB243C68DA00E00BA0 /* QYHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA356AA243C68DA00E00BA0 /* QYHAlertView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,27 +52,55 @@
 
 /* Begin PBXFileReference section */
 		25C167E80BFB0E5180984FBB /* Pods-QYHProgressHUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYHProgressHUD.release.xcconfig"; path = "Target Support Files/Pods-QYHProgressHUD/Pods-QYHProgressHUD.release.xcconfig"; sourceTree = "<group>"; };
+		7A18F79C2444051E0036240C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A18F79E2444051E0036240C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7A18F79F2444051E0036240C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7A18F7A02444051E0036240C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A18F7AE24440AAF0036240C /* QYHHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYHHeader.h; sourceTree = "<group>"; };
+		7A18F7AF24440AAF0036240C /* QYHPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYHPrefixHeader.pch; sourceTree = "<group>"; };
+		7A18F7B024440C430036240C /* UIView+QYHExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+QYHExtension.h"; sourceTree = "<group>"; };
+		7A18F7B124440C430036240C /* UIView+QYHExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+QYHExtension.m"; sourceTree = "<group>"; };
+		7A18F7B324440F580036240C /* CALayer+QYHXibBorderColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CALayer+QYHXibBorderColor.h"; sourceTree = "<group>"; };
+		7A18F7B424440F580036240C /* CALayer+QYHXibBorderColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CALayer+QYHXibBorderColor.m"; sourceTree = "<group>"; };
+		7A18F7B6244411110036240C /* UIColor+QYHExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+QYHExtension.h"; sourceTree = "<group>"; };
+		7A18F7B7244411110036240C /* UIColor+QYHExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+QYHExtension.m"; sourceTree = "<group>"; };
+		7A18F7BC24441C790036240C /* NSDate+QYHExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+QYHExtension.h"; sourceTree = "<group>"; };
+		7A18F7BD24441C790036240C /* NSDate+QYHExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+QYHExtension.m"; sourceTree = "<group>"; };
+		7A18F7BF24444B7D0036240C /* NSString+QYHExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+QYHExtension.h"; sourceTree = "<group>"; };
+		7A18F7C024444B7D0036240C /* NSString+QYHExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+QYHExtension.m"; sourceTree = "<group>"; };
+		7A18F7C3244458320036240C /* NSDictionary+QYHExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+QYHExtension.h"; sourceTree = "<group>"; };
+		7A18F7C4244458320036240C /* NSDictionary+QYHExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+QYHExtension.m"; sourceTree = "<group>"; };
+		7A18F7C6244542AD0036240C /* UIViewController+QYHExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+QYHExtension.h"; sourceTree = "<group>"; };
+		7A18F7C7244542AD0036240C /* UIViewController+QYHExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+QYHExtension.m"; sourceTree = "<group>"; };
+		7A18F7C9244543630036240C /* UIImage+QYHExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+QYHExtension.h"; sourceTree = "<group>"; };
+		7A18F7CA244543630036240C /* UIImage+QYHExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+QYHExtension.m"; sourceTree = "<group>"; };
+		7A18F7CC244548170036240C /* NSObject+QYHExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+QYHExtension.h"; sourceTree = "<group>"; };
+		7A18F7CD244548170036240C /* NSObject+QYHExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+QYHExtension.m"; sourceTree = "<group>"; };
+		7A18F7CF244555BF0036240C /* NSMutableAttributedString+QYHExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+QYHExtension.h"; sourceTree = "<group>"; };
+		7A18F7D0244555BF0036240C /* NSMutableAttributedString+QYHExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+QYHExtension.m"; sourceTree = "<group>"; };
+		7A18F7D824458BDA0036240C /* QYHProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYHProgressHUD.m; sourceTree = "<group>"; };
+		7A18F7D924458BDA0036240C /* QYHProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYHProgressHUD.h; sourceTree = "<group>"; };
+		7A18F7DC24458BDA0036240C /* QYHAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYHAlertView.h; sourceTree = "<group>"; };
+		7A18F7DD24458BDA0036240C /* QYHAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYHAlertView.m; sourceTree = "<group>"; };
+		7A18F7E024458C350036240C /* QYHBubbleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYHBubbleView.h; sourceTree = "<group>"; };
+		7A18F7E124458C350036240C /* QYHBubbleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYHBubbleView.m; sourceTree = "<group>"; };
+		7A18F7E4244591500036240C /* QYHSelectedCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYHSelectedCell.h; sourceTree = "<group>"; };
+		7A18F7E5244591500036240C /* QYHSelectedCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYHSelectedCell.m; sourceTree = "<group>"; };
+		7A18F7E72445936D0036240C /* QYHSelectedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYHSelectedView.h; sourceTree = "<group>"; };
+		7A18F7E82445936D0036240C /* QYHSelectedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYHSelectedView.m; sourceTree = "<group>"; };
+		7A18F7EE2445AEE00036240C /* QYHPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYHPickerView.h; sourceTree = "<group>"; };
+		7A18F7EF2445AEE00036240C /* QYHPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYHPickerView.m; sourceTree = "<group>"; };
+		7A5C35212443F5F900866796 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7A5C35222443F5F900866796 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7A5C35292443F5F900866796 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7A5C352D2443F5F900866796 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		7A6A964D243715ED00586065 /* QYHProgressHUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QYHProgressHUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A6A9650243715ED00586065 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		7A6A9651243715ED00586065 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7A6A9656243715ED00586065 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7A6A9657243715ED00586065 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		7A6A965C243715F100586065 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7A6A965F243715F100586065 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7A6A9661243715F100586065 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7A6A9662243715F100586065 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A6A9668243715F100586065 /* QYHProgressHUDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QYHProgressHUDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A6A966C243715F100586065 /* QYHProgressHUDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYHProgressHUDTests.m; sourceTree = "<group>"; };
 		7A6A966E243715F100586065 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A6A9673243715F100586065 /* QYHProgressHUDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QYHProgressHUDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A6A9677243715F100586065 /* QYHProgressHUDUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYHProgressHUDUITests.m; sourceTree = "<group>"; };
 		7A6A9679243715F100586065 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7A6A96892437186300586065 /* QYHProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYHProgressHUD.h; sourceTree = "<group>"; };
-		7A6A968A2437186300586065 /* QYHProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYHProgressHUD.m; sourceTree = "<group>"; };
-		7AA356A9243C68DA00E00BA0 /* QYHAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYHAlertView.h; sourceTree = "<group>"; };
-		7AA356AA243C68DA00E00BA0 /* QYHAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYHAlertView.m; sourceTree = "<group>"; };
-		7AFC2BA32441B555000CECF3 /* QYHHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYHHeader.h; sourceTree = "<group>"; };
-		7AFC2BA42441B6DB000CECF3 /* QYHPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYHPrefixHeader.pch; sourceTree = "<group>"; };
 		9413768F2DA1E7492F1FCB13 /* Pods-QYHProgressHUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QYHProgressHUD.debug.xcconfig"; path = "Target Support Files/Pods-QYHProgressHUD/Pods-QYHProgressHUD.debug.xcconfig"; sourceTree = "<group>"; };
 		C310D70D34AD7F063B12D088 /* Pods_QYHProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QYHProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -97,6 +139,134 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7A18F79B2444051E0036240C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7A18F79C2444051E0036240C /* Assets.xcassets */,
+				7A18F7A02444051E0036240C /* Info.plist */,
+				7A18F79D2444051E0036240C /* LaunchScreen.storyboard */,
+				7A18F79F2444051E0036240C /* main.m */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		7A18F7AB24440AAF0036240C /* General */ = {
+			isa = PBXGroup;
+			children = (
+				7A18F7AC24440AAF0036240C /* Category */,
+				7A18F7AD24440AAF0036240C /* Macros */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		7A18F7AC24440AAF0036240C /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				7A18F7B024440C430036240C /* UIView+QYHExtension.h */,
+				7A18F7B124440C430036240C /* UIView+QYHExtension.m */,
+				7A18F7B324440F580036240C /* CALayer+QYHXibBorderColor.h */,
+				7A18F7B424440F580036240C /* CALayer+QYHXibBorderColor.m */,
+				7A18F7B6244411110036240C /* UIColor+QYHExtension.h */,
+				7A18F7B7244411110036240C /* UIColor+QYHExtension.m */,
+				7A18F7BC24441C790036240C /* NSDate+QYHExtension.h */,
+				7A18F7BD24441C790036240C /* NSDate+QYHExtension.m */,
+				7A18F7BF24444B7D0036240C /* NSString+QYHExtension.h */,
+				7A18F7C024444B7D0036240C /* NSString+QYHExtension.m */,
+				7A18F7C3244458320036240C /* NSDictionary+QYHExtension.h */,
+				7A18F7C4244458320036240C /* NSDictionary+QYHExtension.m */,
+				7A18F7C6244542AD0036240C /* UIViewController+QYHExtension.h */,
+				7A18F7C7244542AD0036240C /* UIViewController+QYHExtension.m */,
+				7A18F7C9244543630036240C /* UIImage+QYHExtension.h */,
+				7A18F7CA244543630036240C /* UIImage+QYHExtension.m */,
+				7A18F7CC244548170036240C /* NSObject+QYHExtension.h */,
+				7A18F7CD244548170036240C /* NSObject+QYHExtension.m */,
+				7A18F7CF244555BF0036240C /* NSMutableAttributedString+QYHExtension.h */,
+				7A18F7D0244555BF0036240C /* NSMutableAttributedString+QYHExtension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		7A18F7AD24440AAF0036240C /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				7A18F7AE24440AAF0036240C /* QYHHeader.h */,
+				7A18F7AF24440AAF0036240C /* QYHPrefixHeader.pch */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		7A18F7D624458BDA0036240C /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				7A18F7EA2445AEC30036240C /* QYHPickerView */,
+				7A18F7E3244591270036240C /* QYHSelectedView */,
+				7A18F7DA24458BDA0036240C /* QYHBubbleView */,
+				7A18F7DB24458BDA0036240C /* QYHAlertView */,
+				7A18F7D724458BDA0036240C /* QYHProgressHUD */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		7A18F7D724458BDA0036240C /* QYHProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				7A18F7D924458BDA0036240C /* QYHProgressHUD.h */,
+				7A18F7D824458BDA0036240C /* QYHProgressHUD.m */,
+			);
+			path = QYHProgressHUD;
+			sourceTree = "<group>";
+		};
+		7A18F7DA24458BDA0036240C /* QYHBubbleView */ = {
+			isa = PBXGroup;
+			children = (
+				7A18F7E024458C350036240C /* QYHBubbleView.h */,
+				7A18F7E124458C350036240C /* QYHBubbleView.m */,
+			);
+			path = QYHBubbleView;
+			sourceTree = "<group>";
+		};
+		7A18F7DB24458BDA0036240C /* QYHAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				7A18F7DC24458BDA0036240C /* QYHAlertView.h */,
+				7A18F7DD24458BDA0036240C /* QYHAlertView.m */,
+			);
+			path = QYHAlertView;
+			sourceTree = "<group>";
+		};
+		7A18F7E3244591270036240C /* QYHSelectedView */ = {
+			isa = PBXGroup;
+			children = (
+				7A18F7E4244591500036240C /* QYHSelectedCell.h */,
+				7A18F7E5244591500036240C /* QYHSelectedCell.m */,
+				7A18F7E72445936D0036240C /* QYHSelectedView.h */,
+				7A18F7E82445936D0036240C /* QYHSelectedView.m */,
+			);
+			path = QYHSelectedView;
+			sourceTree = "<group>";
+		};
+		7A18F7EA2445AEC30036240C /* QYHPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				7A18F7EE2445AEE00036240C /* QYHPickerView.h */,
+				7A18F7EF2445AEE00036240C /* QYHPickerView.m */,
+			);
+			path = QYHPickerView;
+			sourceTree = "<group>";
+		};
+		7A5C35202443F5F900866796 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7A18F7D624458BDA0036240C /* CustomView */,
+				7A5C35212443F5F900866796 /* AppDelegate.h */,
+				7A5C35292443F5F900866796 /* AppDelegate.m */,
+				7A18F7AB24440AAF0036240C /* General */,
+				7A5C352D2443F5F900866796 /* ViewController.h */,
+				7A5C35222443F5F900866796 /* ViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		7A6A9644243715ED00586065 = {
 			isa = PBXGroup;
 			children = (
@@ -122,18 +292,8 @@
 		7A6A964F243715ED00586065 /* QYHProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				7AA356A2243C5DE100E00BA0 /* QYHAlertView */,
-				7A6A96852437164400586065 /* QYHProgressHUD */,
-				7A6A9650243715ED00586065 /* AppDelegate.h */,
-				7A6A9651243715ED00586065 /* AppDelegate.m */,
-				7AFC2BA32441B555000CECF3 /* QYHHeader.h */,
-				7AFC2BA42441B6DB000CECF3 /* QYHPrefixHeader.pch */,
-				7A6A9656243715ED00586065 /* ViewController.h */,
-				7A6A9657243715ED00586065 /* ViewController.m */,
-				7A6A965C243715F100586065 /* Assets.xcassets */,
-				7A6A965E243715F100586065 /* LaunchScreen.storyboard */,
-				7A6A9661243715F100586065 /* Info.plist */,
-				7A6A9662243715F100586065 /* main.m */,
+				7A5C35202443F5F900866796 /* Classes */,
+				7A18F79B2444051E0036240C /* Support Files */,
 			);
 			path = QYHProgressHUD;
 			sourceTree = "<group>";
@@ -154,24 +314,6 @@
 				7A6A9679243715F100586065 /* Info.plist */,
 			);
 			path = QYHProgressHUDUITests;
-			sourceTree = "<group>";
-		};
-		7A6A96852437164400586065 /* QYHProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				7A6A96892437186300586065 /* QYHProgressHUD.h */,
-				7A6A968A2437186300586065 /* QYHProgressHUD.m */,
-			);
-			path = QYHProgressHUD;
-			sourceTree = "<group>";
-		};
-		7AA356A2243C5DE100E00BA0 /* QYHAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				7AA356A9243C68DA00E00BA0 /* QYHAlertView.h */,
-				7AA356AA243C68DA00E00BA0 /* QYHAlertView.m */,
-			);
-			path = QYHAlertView;
 			sourceTree = "<group>";
 		};
 		ABE758EABA9CFA5D8C1427B8 /* Pods */ = {
@@ -288,8 +430,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A6A9660243715F100586065 /* LaunchScreen.storyboard in Resources */,
-				7A6A965D243715F100586065 /* Assets.xcassets in Resources */,
+				7A18F7A12444051E0036240C /* Assets.xcassets in Resources */,
+				7A18F7A22444051E0036240C /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,11 +498,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A6A9658243715ED00586065 /* ViewController.m in Sources */,
-				7AA356AB243C68DA00E00BA0 /* QYHAlertView.m in Sources */,
-				7A6A968B2437186300586065 /* QYHProgressHUD.m in Sources */,
-				7A6A9652243715ED00586065 /* AppDelegate.m in Sources */,
-				7A6A9663243715F100586065 /* main.m in Sources */,
+				7A18F7D1244555BF0036240C /* NSMutableAttributedString+QYHExtension.m in Sources */,
+				7A18F7B8244411110036240C /* UIColor+QYHExtension.m in Sources */,
+				7A18F7BE24441C790036240C /* NSDate+QYHExtension.m in Sources */,
+				7A18F7E224458C350036240C /* QYHBubbleView.m in Sources */,
+				7A18F7E92445936D0036240C /* QYHSelectedView.m in Sources */,
+				7A18F7A32444051E0036240C /* main.m in Sources */,
+				7A18F7B224440C430036240C /* UIView+QYHExtension.m in Sources */,
+				7A5C35342443F5F900866796 /* ViewController.m in Sources */,
+				7A18F7C8244542AD0036240C /* UIViewController+QYHExtension.m in Sources */,
+				7A18F7DF24458BDA0036240C /* QYHAlertView.m in Sources */,
+				7A18F7B524440F580036240C /* CALayer+QYHXibBorderColor.m in Sources */,
+				7A18F7CB244543630036240C /* UIImage+QYHExtension.m in Sources */,
+				7A18F7F02445AEE00036240C /* QYHPickerView.m in Sources */,
+				7A18F7C124444B7D0036240C /* NSString+QYHExtension.m in Sources */,
+				7A5C35362443F5F900866796 /* AppDelegate.m in Sources */,
+				7A18F7CE244548170036240C /* NSObject+QYHExtension.m in Sources */,
+				7A18F7C5244458320036240C /* NSDictionary+QYHExtension.m in Sources */,
+				7A18F7E6244591500036240C /* QYHSelectedCell.m in Sources */,
+				7A18F7DE24458BDA0036240C /* QYHProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,10 +552,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7A6A965E243715F100586065 /* LaunchScreen.storyboard */ = {
+		7A18F79D2444051E0036240C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7A6A965F243715F100586065 /* Base */,
+				7A18F79E2444051E0036240C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -525,8 +681,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28L95LZPNF;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/QYHProgressHUD/QYHPrefixHeader.pch";
-				INFOPLIST_FILE = QYHProgressHUD/Info.plist;
+				GCC_PREFIX_HEADER = "/Users/saj-king/Desktop/QYHCustomView/QYHProgressHUD/Classes/General/Macros/QYHPrefixHeader.pch";
+				INFOPLIST_FILE = "QYHProgressHUD/Support Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -550,8 +706,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28L95LZPNF;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/QYHProgressHUD/QYHPrefixHeader.pch";
-				INFOPLIST_FILE = QYHProgressHUD/Info.plist;
+				GCC_PREFIX_HEADER = "/Users/saj-king/Desktop/QYHCustomView/QYHProgressHUD/Classes/General/Macros/QYHPrefixHeader.pch";
+				INFOPLIST_FILE = "QYHProgressHUD/Support Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -10,9 +10,14 @@
 #import "QYHProgressHUD.h"
 #import "Masonry.h"
 #import "QYHAlertView.h"
+#import "QYHBubbleView.h"
+#import "QYHSelectedView.h"
+#import "QYHPickerView.h"
 
-@interface ViewController ()
+@interface ViewController ()<QYHPickerViewDelegate>
 @property (nonatomic, strong) QYHAlertView *alertView;
+@property (nonatomic, strong) QYHSelectedView *selectedView;
+@property (nonatomic, strong) QYHPickerView *pickerView;
 @end
 
 @implementation ViewController
@@ -34,6 +39,7 @@
     button.center = self.view.center;
     
     [self.view addSubview:button];
+    
 }
 
 - (void)click{
@@ -53,15 +59,88 @@
 //        [QYHAlertView hideAnimated:YES];
 //    }];
     
-    @weakify(self);
-    [QYHAlertView alertViewWithIcon:@"refresh_success" title:@"同步成功，将在刷功" message:@"同步成功，将在刷新周期的时间内做调整，将在刷新周期的时间内做调整" textField:YES actionCancelWithTitle:@"关闭" actionConfirmWithTitle:nil handler:^(NSInteger index) {
-        @strongify(self);
-        
-        [QYHAlertView hideAnimated:YES];
-        [self showSystemAlert];
-    }];
+//    @weakify(self);
+//    [QYHAlertView alertViewWithIcon:@"refresh_success" title:@"同步成功，将在刷功" message:@"同步成功，将在刷新周期的时间内做调整，将在刷新周期的时间内做调整" textField:YES actionCancelWithTitle:@"关闭" actionConfirmWithTitle:nil handler:^(NSInteger index) {
+//        @strongify(self);
+//
+//        [QYHAlertView hideAnimated:YES];
+//        [self showSystemAlert];
+//    }];
     
-    NSLog(@"123==%d", NavigationHeight);
+//    [self showBubbleView];
+    
+//    [self showSelectedView];
+    
+    
+    [self showPickerView];
+}
+
+- (void)showPickerView{
+    _pickerView = [[QYHPickerView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    [[UIApplication sharedApplication].keyWindow addSubview:_pickerView];
+    _pickerView.components = 2;
+    _pickerView.datasDict = [@{@"0":@[@"123", @"234", @"345"],
+                               @"1":@[@"123", @"234", @"345"]
+    } mutableCopy];
+    _pickerView.delegate = self;
+    _pickerView.componentWidth = SCREEN_WIDTH*0.5;
+    _pickerView.labelSize = 20;
+    [_pickerView creatPickerView];
+}
+#pragma mark -- QYHPickerViewDelegate
+- (void)confirmPicker:(NSMutableDictionary *)dict rowDict:(NSMutableDictionary *)rowDict{
+    NSString *tempData = [dict valueForKey:@"0"];
+    CGFloat tempFloat = [tempData floatValue];
+   
+}
+
+
+- (void)showSelectedView{
+    [self.selectedView showWithDataArray:@[@"123", @"234", @"345"] callBack:^(NSInteger index) {
+        
+    }];
+}
+
+- (QYHSelectedView *)selectedView{
+    if (!_selectedView) {
+        QYHSelectedView *selectedView = [[QYHSelectedView alloc] init];
+        [[UIApplication sharedApplication].keyWindow addSubview:selectedView];
+        
+        [selectedView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo([UIApplication sharedApplication].keyWindow).offset(AdaptionWidthWith6(15));
+            make.right.equalTo([UIApplication sharedApplication].keyWindow).offset(AdaptionWidthWith6(-114));
+            make.top.equalTo([UIApplication sharedApplication].keyWindow).offset(NavigationHeight + AdaptionHeightWith6(10));
+            make.height.mas_equalTo(AdaptionWidthWith6(150));
+        }];
+        
+        selectedView.cellHeight = 55;
+        selectedView.bgBackgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
+        selectedView.fontsize = 14;
+        selectedView.showBubble = YES;
+        selectedView.cornerRadius = 6;
+        selectedView.bubbleViewfillColorIndex = 0;
+        
+        _selectedView = selectedView;
+    }
+    return _selectedView;
+}
+
+- (void)showBubbleView{
+    QYHBubbleView *bubbleView = [[QYHBubbleView alloc] init];
+
+    bubbleView.fillColor = [UIColor lightGrayColor];
+    bubbleView.bubbleType = 2;
+    
+    bubbleView.strokeColor = [UIColor whiteColor];
+    bubbleView.margin = 15;
+    bubbleView.arrowWidth = 20;
+    bubbleView.arrowHeight = 10;
+    
+    [self.view addSubview:bubbleView];
+    [bubbleView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(100, 80));
+        make.center.equalTo(self.view);
+    }];
 }
 
 - (void)showClassCustomAlert{
