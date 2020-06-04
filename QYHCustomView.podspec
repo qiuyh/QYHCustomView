@@ -8,15 +8,15 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QYHCustomView'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = '各种自定义view，ProgressHUD & AlertView'
   s.description      = '各种自定义view，ProgressHUD & AlertView'
-  s.homepage         = 'https://github.com/1039724903@qq.com/QYHCustomView'
+  s.homepage         = 'https://github.com/qiuyh/QYHCustomView'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '1039724903@qq.com' => 'yonghuai.qiu@saj-electric.com' }
+  s.author           = { 'Qiu' => '1039724903@qq.com' }
   s.platform     = :ios
   s.ios.deployment_target = '9.0'
-  s.source           = { :git => 'https://github.com/1039724903@qq.com/QYHCustomView.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/qiuyh/QYHCustomView.git', :tag => s.version.to_s }
   s.requires_arc = true
   
   s.dependency "Masonry", "1.1.0"
