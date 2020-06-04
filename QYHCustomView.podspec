@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QYHCustomView'
-  s.version          = '0.0.3'
+  s.version          = '0.0.5'
   s.summary          = '各种自定义view，ProgressHUD & AlertView'
   s.description      = '各种自定义view，ProgressHUD & AlertView'
   s.homepage         = 'https://github.com/qiuyh/QYHCustomView'
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
         customView.source_files = 'QYHCustomView/Classes/CustomView/**/*.{h,m}'
     end
     classes.subspec 'General' do |general|
-        general.source_files = 'QYHCustomView/Classes/General/**/*.{h,m}'
+        general.source_files = 'QYHCustomView/Classes/General/**/*'
     end
   end
   
