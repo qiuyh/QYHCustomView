@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QYHCustomView'
-  s.version          = '0.0.5'
+  s.version          = '0.0.6'
   s.summary          = '各种自定义view，ProgressHUD & AlertView'
   s.description      = '各种自定义view，ProgressHUD & AlertView'
   s.homepage         = 'https://github.com/qiuyh/QYHCustomView'
@@ -18,12 +18,13 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.source           = { :git => 'https://github.com/qiuyh/QYHCustomView.git', :tag => s.version.to_s }
   s.subspec 'Classes' do |classes|
-    classes.subspec 'CustomView' do |customView|
-        customView.source_files = 'QYHCustomView/Classes/CustomView/**/*.{h,m}'
-    end
-    classes.subspec 'General' do |general|
-        general.source_files = 'QYHCustomView/Classes/General/**/*'
-    end
+    classes.source_files = 'QYHCustomView/Classes/**/*.{h,m}'
+#    classes.subspec 'CustomView' do |customView|
+#        customView.source_files = 'QYHCustomView/Classes/CustomView/**/*.{h,m}'
+#    end
+#    classes.subspec 'General' do |general|
+#        general.source_files = 'QYHCustomView/Classes/General/**/*.{h,m}'
+#    end
   end
   
   s.requires_arc = true
