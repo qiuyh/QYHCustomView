@@ -19,14 +19,14 @@
 带bezelView默认背景颜色的转圈圈
 */
 + (instancetype)showHUDToView:(UIView *)view{
-    if (view == nil) view = [UIApplication sharedApplication].windows.lastObject;
+    if (view == nil) view = QYHKeyWindow;
     return [QYHProgressHUD showHUDAddedTo:view animated:YES];
 }
 /**
  不带bezelView背景颜色的转圈圈
 */
 + (instancetype)showBgClearColorHUDToView:(nullable UIView *)view{
-    if (view == nil) view = [UIApplication sharedApplication].windows.lastObject;
+    if (view == nil) view = QYHKeyWindow;
     QYHProgressHUD *hud = [QYHProgressHUD showHUDAddedTo:view animated:YES];
     hud.removeFromSuperViewOnHide = YES;
     hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
@@ -62,7 +62,7 @@
  吐司提示语，图片
 */
 + (instancetype)showMessage:(nullable NSString *)message icon:(nullable NSString *)icon toView:(nullable UIView *)view fonSize:(CGFloat)fonSize{
-    if (view == nil) view = [UIApplication sharedApplication].windows.lastObject;
+    if (view == nil) view = QYHKeyWindow;
     QYHProgressHUD *hud = [QYHProgressHUD showHUDAddedTo:view animated:YES];
     if (message) {
         hud.detailsLabel.text = message;
@@ -91,7 +91,7 @@
  吐司进度条，默认字体大小为16
 */
 + (instancetype)showProgressHUDMode:(MBProgressHUDMode)progressHUDMode message:(nullable NSString *)message toView:(nullable UIView *)view fonSize:(CGFloat)fonSize{
-    if (view == nil) view = [UIApplication sharedApplication].windows.lastObject;
+    if (view == nil) view = QYHKeyWindow;
     QYHProgressHUD *hud = [QYHProgressHUD showHUDAddedTo:view animated:YES];
     if (message) {
         hud.detailsLabel.text = message;
@@ -107,7 +107,7 @@
  自定义view
  */
 + (instancetype)showCustomView:(UIView *)customView toView:(nullable UIView *)view afterDelay:(CGFloat)afterDelay{
-    if (view == nil) view = [UIApplication sharedApplication].windows.lastObject;
+    if (view == nil) view = QYHKeyWindow;
     //提高view的Content Hugging Priority
 //    [customView setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
     
@@ -150,7 +150,7 @@
  隐藏
 */
 + (BOOL)hideHUDForView:(UIView *)view{
-    if (view == nil) view = [UIApplication sharedApplication].windows.lastObject;
+    if (view == nil) view = QYHKeyWindow;
     return [QYHProgressHUD hideHUDForView:view animated:YES];
 }
 

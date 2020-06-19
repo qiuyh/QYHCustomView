@@ -44,7 +44,7 @@
 }
 
 - (void)click{
-//    [self showCustomViewHUD];
+    [self showCustomViewHUD];
     
 //    [self showClassCustomAlert];
 
@@ -73,7 +73,7 @@
 //    [self showSelectedView];
     
     
-    [self showPickerView];
+//    [self showPickerView];
 }
 
 - (void)showPickerView{

@@ -77,6 +77,21 @@ tmp = 1;\
 tmp;\
 })
 
+#define QYHKeyWindow ({\
+UIWindow* window = nil;\
+if (@available(iOS 13.0, *)){\
+    for (UIWindowScene* windowScene in [UIApplication sharedApplication].connectedScenes){\
+        if (windowScene.activationState == UISceneActivationStateForegroundActive){\
+            window = windowScene.windows.firstObject;\
+            break;\
+        }\
+    }\
+}else{\
+    window = [UIApplication sharedApplication].keyWindow;\
+}\
+window;\
+})
+
 //Navigation && Tabbar && StateBar
 #define NavigationHeight (iPhoneX ? 88 : 64)
 #define TabbarHeight  (iPhoneX ? 83 : 49)
