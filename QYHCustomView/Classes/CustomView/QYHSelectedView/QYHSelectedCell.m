@@ -10,7 +10,7 @@
 #import "Masonry.h"
 
 #define QYHScreen_width (UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation) ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen] bounds].size.height)
-#define QYHAdaptionWidth(width) width*QYHScreen_width/375.0
+#define QYHAdaptionWidth(width) (width*((QYHScreen_width/375.0>1.8)?1.8:(QYHScreen_width/375.0)))
 
 @interface QYHSelectedCell ()
 @property (nonatomic, strong) UILabel *titleLabel;

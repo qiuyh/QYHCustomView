@@ -13,7 +13,7 @@
 #define QYHScreen_width (UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation) ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen] bounds].size.height)
 #define QYHScreen_height (UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation) ? [[UIScreen mainScreen] bounds].size.height : [[UIScreen mainScreen] bounds].size.width)
 
-#define QYHAdaptionWidth(width) width*QYHScreen_width/375.0
+#define QYHAdaptionWidth(width) (width*((QYHScreen_width/375.0>1.8)?1.8:(QYHScreen_width/375.0)))
 #define QYHSpace QYHAdaptionWidth(15)
 
 typedef void(^HandlerBlock)(NSInteger index);

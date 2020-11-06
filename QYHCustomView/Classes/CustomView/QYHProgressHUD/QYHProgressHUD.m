@@ -9,7 +9,7 @@
 #import "QYHProgressHUD.h"
 
 #define QYHScreen_width [[UIScreen mainScreen] bounds].size.width
-#define QYHAdaptionWidth(width) width*QYHScreen_width/375.0
+#define QYHAdaptionWidth(width) (width*((QYHScreen_width/375.0>1.8)?1.8:(QYHScreen_width/375.0)))
 
 #define titleFont QYHAdaptionWidth(15)
 
