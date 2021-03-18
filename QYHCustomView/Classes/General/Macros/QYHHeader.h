@@ -67,16 +67,6 @@ currentTimeString;\
 #define iPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #define iPhone  (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 
-#define iPhoneX ({\
-int tmp = 0;\
-if (@available(iOS 11.0, *)) {\
-if ([UIApplication sharedApplication].delegate.window.safeAreaInsets.top > 20) {\
-tmp = 1;\
-}\
-}\
-tmp;\
-})
-
 #define QYHKeyWindow ({\
 UIWindow* window = nil;\
 if (@available(iOS 13.0, *)){\
@@ -93,9 +83,36 @@ window;\
 })
 
 //Navigation && Tabbar && StateBar
-#define NavigationHeight (iPhoneX ? 88 : 64)
-#define TabbarHeight  (iPhoneX ? 83 : 49)
-#define StateBarHeight (iPhoneX ? 44 : 20)
+#define SafeAreaBottomHeight ({\
+    CGFloat tmp = 0;\
+    if (@available(iOS 11.0, *)) {\
+        UIWindow *window = [UIApplication.sharedApplication.windows firstObject];\
+        tmp = window.safeAreaInsets.bottom;\
+    }\
+    tmp;\
+})
+
+#define iPhoneX ({\
+    BOOL tmp = SafeAreaBottomHeight;\
+    tmp;\
+})
+
+// 非刘海屏，若存在状态条隐藏显示的切换，会有window.safeAreaInsets.top返回为0的异常情况
+#define StatusBarHeight ({\
+    CGFloat tmp = 20;\
+    if (@available(iOS 11.0, *)) {\
+        if (iPhoneX) {\
+            UIWindow *window = [UIApplication.sharedApplication.windows firstObject];\
+            tmp = window.safeAreaInsets.top;\
+        }\
+    }\
+    tmp;\
+})
+
+#define SafeAreaTopHeight (StatusBarHeight + 44)
+#define SafeAreaStateTopHeight (StatusBarHeight-20)
+#define NavigationHeight SafeAreaTopHeight
+#define TabbarHeight  (SafeAreaBottomHeight+49)
 
 //mainScreen width && height
 #define SCREEN_WIDTH (UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation) ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen] bounds].size.height)

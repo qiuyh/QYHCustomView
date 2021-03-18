@@ -44,7 +44,7 @@
 }
 
 - (void)click{
-    [self showCustomViewHUD];
+//    [self showCustomViewHUD];
     
 //    [self showClassCustomAlert];
 
@@ -70,7 +70,7 @@
     
 //    [self showBubbleView];
     
-//    [self showSelectedView];
+    [self showSelectedView];
     
     
 //    [self showPickerView];
@@ -133,8 +133,7 @@
     QYHBubbleView *bubbleView = [[QYHBubbleView alloc] init];
 
     bubbleView.fillColor = [UIColor lightGrayColor];
-    bubbleView.bubbleType = 2;
-    
+    bubbleView.bubbleType = QYHBubbleTypeTopMiddle;
     bubbleView.strokeColor = [UIColor whiteColor];
     bubbleView.margin = 15;
     bubbleView.arrowWidth = 20;
