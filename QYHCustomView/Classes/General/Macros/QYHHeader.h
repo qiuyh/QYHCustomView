@@ -76,6 +76,9 @@ if (@available(iOS 13.0, *)){\
             break;\
         }\
     }\
+    if (!window){\
+        window = [UIApplication sharedApplication].keyWindow;\
+    }\
 }else{\
     window = [UIApplication sharedApplication].keyWindow;\
 }\

@@ -20,6 +20,7 @@
 */
 + (instancetype)showHUDToView:(UIView *)view{
     if (view == nil) view = QYHKeyWindow;
+    [self removeHudForView:view];
     return [QYHProgressHUD showHUDAddedTo:view animated:YES];
 }
 /**
@@ -27,6 +28,7 @@
 */
 + (instancetype)showBgClearColorHUDToView:(nullable UIView *)view{
     if (view == nil) view = QYHKeyWindow;
+    [self removeHudForView:view];
     QYHProgressHUD *hud = [QYHProgressHUD showHUDAddedTo:view animated:YES];
     hud.removeFromSuperViewOnHide = YES;
     hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
@@ -63,6 +65,7 @@
 */
 + (instancetype)showMessage:(nullable NSString *)message icon:(nullable NSString *)icon toView:(nullable UIView *)view fonSize:(CGFloat)fonSize{
     if (view == nil) view = QYHKeyWindow;
+    [self removeHudForView:view];
     QYHProgressHUD *hud = [QYHProgressHUD showHUDAddedTo:view animated:YES];
     if (message) {
         hud.detailsLabel.text = message;
@@ -92,6 +95,7 @@
 */
 + (instancetype)showProgressHUDMode:(MBProgressHUDMode)progressHUDMode message:(nullable NSString *)message toView:(nullable UIView *)view fonSize:(CGFloat)fonSize{
     if (view == nil) view = QYHKeyWindow;
+    [self removeHudForView:view];
     QYHProgressHUD *hud = [QYHProgressHUD showHUDAddedTo:view animated:YES];
     if (message) {
         hud.detailsLabel.text = message;
@@ -110,7 +114,7 @@
     if (view == nil) view = QYHKeyWindow;
     //提高view的Content Hugging Priority
 //    [customView setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
-    
+    [self removeHudForView:view];
     QYHProgressHUD *hud = [QYHProgressHUD showHUDAddedTo:view animated:YES];
     hud.bezelView.backgroundColor = [UIColor clearColor];
     hud.bezelView.layer.cornerRadius = customView.layer.cornerRadius;
@@ -152,6 +156,14 @@
 + (BOOL)hideHUDForView:(UIView *)view{
     if (view == nil) view = QYHKeyWindow;
     return [QYHProgressHUD hideHUDForView:view animated:YES];
+}
+
++ (void)removeHudForView:(UIView *)view{
+    QYHProgressHUD *hud = (QYHProgressHUD *)[QYHProgressHUD HUDForView:view];
+    if (hud) {
+        [hud removeFromSuperview];
+        hud = nil;
+    }
 }
 
 @end
