@@ -60,17 +60,17 @@
 //        [QYHAlertView hideAnimated:YES];
 //    }];
     
-//    @weakify(self);
-//    [QYHAlertView alertViewWithIcon:@"refresh_success" title:@"同步成功，将在刷功" message:@"同步成功，将在刷新周期的时间内做调整，将在刷新周期的时间内做调整" textField:YES actionCancelWithTitle:@"关闭" actionConfirmWithTitle:nil handler:^(NSInteger index) {
-//        @strongify(self);
-//
-//        [QYHAlertView hideAnimated:YES];
-//        [self showSystemAlert];
-//    }];
+    @weakify(self);
+    [QYHAlertView alertViewWithIcon:@"refresh_success" title:@"同步成功，将在刷功" message:@"同步成功，将在刷新周期的时间内做调整，将在刷新周期的时间内做调整" textField:NO actionCancelWithTitle:@"关闭" actionConfirmWithTitle:nil handler:^(NSInteger index) {
+        @strongify(self);
+
+        [QYHAlertView hideAnimated:YES];
+        [self showSystemAlert];
+    }];
     
 //    [self showBubbleView];
     
-    [self showSelectedView];
+//    [self showSelectedView];
     
     
 //    [self showPickerView];

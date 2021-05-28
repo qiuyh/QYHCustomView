@@ -301,9 +301,9 @@ typedef void(^HandlerBlock)(NSInteger index);
 
 - (void)closeAction:(UIButton *)button{
     if (self.textField) {
-        if (self.isKeyBoardShow) {
-            return;
-        }
+//        if (self.isKeyBoardShow) {
+//            return;
+//        }
     }else{
         [self hideAnimated:YES];
     }
@@ -406,9 +406,9 @@ typedef void(^HandlerBlock)(NSInteger index);
         [view addSubview:messageLabel];
         [messageLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             if (titleLabel) {
-                make.top.equalTo(titleLabel.mas_bottom).offset(QYHAdaptionWidth(5));
+                make.top.equalTo(titleLabel.mas_bottom).offset(QYHAdaptionWidth(QYHSpace));
             }else if (iconImageView){
-                make.top.equalTo(iconImageView.mas_bottom).offset(QYHAdaptionWidth(10));
+                make.top.equalTo(iconImageView.mas_bottom).offset(QYHAdaptionWidth(QYHSpace));
             }else{
                 make.top.equalTo(view).offset(QYHSpace);
             }
@@ -505,7 +505,7 @@ typedef void(^HandlerBlock)(NSInteger index);
         [cancelButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(hLineView.mas_bottom);
             make.bottom.left.equalTo(view);
-            make.height.mas_equalTo(QYHAdaptionWidth(44));
+            make.height.mas_equalTo(QYHAdaptionWidth(49));
             if (!confirmTitle) {
                 make.right.equalTo(view);
             }
@@ -528,7 +528,7 @@ typedef void(^HandlerBlock)(NSInteger index);
         [confirmButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(hLineView.mas_bottom);
             make.bottom.right.equalTo(view);
-            make.height.mas_equalTo(QYHAdaptionWidth(44));
+            make.height.mas_equalTo(QYHAdaptionWidth(49));
             if (cancelButton) {
                 make.width.equalTo(cancelButton);
                 make.left.equalTo(cancelButton.mas_right);

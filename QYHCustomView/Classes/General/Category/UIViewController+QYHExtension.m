@@ -11,7 +11,7 @@
 
 @implementation UIViewController (QYHExtension)
 
-+(void)load{
++ (void)load{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken,^{
         Class class=[self class];
@@ -29,8 +29,10 @@
 
 - (void)qyh_presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion{
     
-     viewControllerToPresent.modalPresentationStyle = UIModalPresentationFullScreen;
-    [self qyh_presentViewController:viewControllerToPresent animated:flag completion:completion];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        viewControllerToPresent.modalPresentationStyle = UIModalPresentationFullScreen;
+        [self qyh_presentViewController:viewControllerToPresent animated:flag completion:completion];
+    });
 }
 
 @end
