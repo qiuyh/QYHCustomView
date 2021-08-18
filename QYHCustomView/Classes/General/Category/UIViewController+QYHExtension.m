@@ -30,7 +30,10 @@
 - (void)qyh_presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion{
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        viewControllerToPresent.modalPresentationStyle = UIModalPresentationFullScreen;
+        if ([viewControllerToPresent isKindOfClass:[UINavigationController class]]) {
+            viewControllerToPresent.modalPresentationStyle = UIModalPresentationFullScreen;
+        }
+        
         [self qyh_presentViewController:viewControllerToPresent animated:flag completion:completion];
     });
 }
