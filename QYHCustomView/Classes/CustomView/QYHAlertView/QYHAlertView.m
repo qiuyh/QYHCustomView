@@ -368,6 +368,8 @@ typedef void(^HandlerBlock)(NSInteger index);
             make.top.equalTo(view).offset(QYHSpace);
             make.centerX.equalTo(view);
         }];
+        
+        self.iconImageView = iconImageView;
     }
     
     UILabel *titleLabel;
@@ -390,6 +392,8 @@ typedef void(^HandlerBlock)(NSInteger index);
                 make.top.equalTo(view).offset(QYHSpace);
             }
         }];
+        
+        self.titleLabel = titleLabel;
     }
     
     UILabel *messageLabel;
@@ -414,6 +418,8 @@ typedef void(^HandlerBlock)(NSInteger index);
             make.left.equalTo(view).offset(QYHSpace);
             make.right.equalTo(view).offset(-QYHSpace);
         }];
+        
+        self.messageLabel = messageLabel;
     }
     
     UITextField *textField;
@@ -452,6 +458,8 @@ typedef void(^HandlerBlock)(NSInteger index);
                 
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+        
+        self.textField = textField;
     }
     
     if (!titleLabel && !messageLabel && !iconImageView) {
@@ -507,6 +515,8 @@ typedef void(^HandlerBlock)(NSInteger index);
                 make.right.equalTo(view);
             }
         }];
+        
+        self.cancelButton = cancelButton;
     }
     
     UIButton *confirmButton;
@@ -547,6 +557,8 @@ typedef void(^HandlerBlock)(NSInteger index);
             
             self.vLineView = vLineView;
         }
+        
+        self.confirmButton = confirmButton;
     }
     
     if (handler) {
