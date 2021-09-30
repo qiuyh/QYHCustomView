@@ -358,6 +358,7 @@ typedef void(^HandlerBlock)(NSInteger index);
     self.customView = view;
     
     UIImageView *iconImageView;
+    self.iconImageView = iconImageView;
     if (icon) {
         iconImageView = [[UIImageView alloc] init];
         iconImageView.image = [UIImage imageNamed:icon];
@@ -367,11 +368,10 @@ typedef void(^HandlerBlock)(NSInteger index);
             make.top.equalTo(view).offset(QYHSpace);
             make.centerX.equalTo(view);
         }];
-        
-        self.iconImageView = iconImageView;
     }
     
     UILabel *titleLabel;
+    self.titleLabel = titleLabel;
     if (title) {
         titleLabel = [[UILabel alloc] init];
         titleLabel.numberOfLines = 0;
@@ -390,11 +390,10 @@ typedef void(^HandlerBlock)(NSInteger index);
                 make.top.equalTo(view).offset(QYHSpace);
             }
         }];
-        
-        self.titleLabel = titleLabel;
     }
     
     UILabel *messageLabel;
+    self.messageLabel = messageLabel;
     if (message) {
         messageLabel = [[UILabel alloc] init];
         messageLabel.numberOfLines = 0;
@@ -415,11 +414,10 @@ typedef void(^HandlerBlock)(NSInteger index);
             make.left.equalTo(view).offset(QYHSpace);
             make.right.equalTo(view).offset(-QYHSpace);
         }];
-        
-        self.messageLabel = messageLabel;
     }
     
     UITextField *textField;
+    self.textField = textField;
     if (needTextField) {
         textField = [[UITextField alloc] init];
         textField.borderStyle = UITextBorderStyleRoundedRect;
@@ -451,9 +449,7 @@ typedef void(^HandlerBlock)(NSInteger index);
                 make.top.equalTo(view).offset(QYHSpace);
             }
         }];
-        
-        self.textField = textField;
-        
+                
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     }
@@ -492,6 +488,7 @@ typedef void(^HandlerBlock)(NSInteger index);
     self.hLineView = hLineView;
     
     UIButton *cancelButton;
+    self.cancelButton = cancelButton;
     if (cancelTitle) {
         cancelButton = [UIButton buttonWithType:UIButtonTypeSystem];
         [cancelButton setTitle:cancelTitle forState:UIControlStateNormal];
@@ -510,11 +507,10 @@ typedef void(^HandlerBlock)(NSInteger index);
                 make.right.equalTo(view);
             }
         }];
-        
-        self.cancelButton = cancelButton;
     }
     
     UIButton *confirmButton;
+    self.confirmButton = confirmButton;
     if (confirmTitle) {
         confirmButton = [UIButton buttonWithType:UIButtonTypeSystem];
         [confirmButton setTitle:confirmTitle forState:UIControlStateNormal];
@@ -537,9 +533,7 @@ typedef void(^HandlerBlock)(NSInteger index);
             }
         }];
         
-        
-        self.confirmButton = confirmButton;
-        
+                
         if (cancelButton) {
             UIView *vLineView = [[UIView alloc] init];
             vLineView.backgroundColor = color;

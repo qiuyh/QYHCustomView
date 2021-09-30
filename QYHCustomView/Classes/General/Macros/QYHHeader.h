@@ -135,16 +135,16 @@ window;\
 
 #define Proportion(width2, width1) ((width2/width1>1.8)?1.8:(width2/width1))
 
-#define AdaptionHeightWith5(h) h*Proportion(SCREEN_HEIGHT, get5SScreenSize.height)
-#define AdaptionWidthWith5(w) w*Proportion(SCREEN_WIDTH, get5SScreenSize.width)
+#define AdaptionHeightWith5(h) ((int)roundf(h*Proportion(SCREEN_HEIGHT, get5SScreenSize.height))))
+#define AdaptionWidthWith5(w) ((int)roundf(w*Proportion(SCREEN_WIDTH, get5SScreenSize.width)))
 #define AdaptionFont5(fontSize) AdaptionWidthWith5(fontSize)
 
-#define AdaptionHeightWith6(h) h*Proportion(SCREEN_HEIGHT, get6SScreenSize.height)
-#define AdaptionWidthWith6(w) w*Proportion(SCREEN_WIDTH, get6SScreenSize.width)
+#define AdaptionHeightWith6(h) ((int)roundf(h*Proportion(SCREEN_HEIGHT, get6SScreenSize.height)))
+#define AdaptionWidthWith6(w) ((int)roundf(w*Proportion(SCREEN_WIDTH, get6SScreenSize.width)))
 #define AdaptionFont6(fontSize) AdaptionWidthWith6(fontSize)
 
-#define AdaptionHeightWith6p(h) h*Proportion(SCREEN_HEIGHT, get6PlusScreenSize.height)
-#define AdaptionWidthWith6p(w) w*Proportion(SCREEN_WIDTH, get6PlusScreenSize.width)
+#define AdaptionHeightWith6p(h) ((int)roundf(h*Proportion(SCREEN_HEIGHT, get6PlusScreenSize.height)))
+#define AdaptionWidthWith6p(w) ((int)roundf(w*Proportion(SCREEN_WIDTH, get6PlusScreenSize.width)))
 #define AdaptionFont6p(fontSize) AdaptionWidthWith6p(fontSize)
 
 //BundleIdentifier
