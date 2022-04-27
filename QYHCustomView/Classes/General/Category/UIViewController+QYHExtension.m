@@ -29,13 +29,13 @@
 
 - (void)qyh_presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion{
     
-    dispatch_async(dispatch_get_main_queue(), ^{
+//    dispatch_async(dispatch_get_main_queue(), ^{
         if ([viewControllerToPresent isKindOfClass:[UINavigationController class]]) {
             viewControllerToPresent.modalPresentationStyle = UIModalPresentationFullScreen;
         }
         
         [self qyh_presentViewController:viewControllerToPresent animated:flag completion:completion];
-    });
+//    });
 }
 
 @end
