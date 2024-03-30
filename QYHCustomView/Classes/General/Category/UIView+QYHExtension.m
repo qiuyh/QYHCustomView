@@ -100,17 +100,17 @@
     }
 }
 
-- (void)adaptScreenWidthWithType:(AdaptScreenWidthType)type
+- (void)adaptScreenWidthWithType:(QYHAdaptScreenWidthType)type
                      exceptViews:(NSArray<Class> *)exceptViews {
     if (![self isExceptViewClassWithClassArray:exceptViews]) {
         // 是否要对约束进行等比例
-        BOOL adaptConstraint = ((type & AdaptScreenWidthTypeConstraint) || type == AdaptScreenWidthTypeAll);
+        BOOL adaptConstraint = ((type & QYHAdaptScreenWidthTypeConstraint) || type == QYHAdaptScreenWidthTypeAll);
         
         // 是否对字体大小进行等比例
-        BOOL adaptFontSize = ((type & AdaptScreenWidthTypeFontSize) || type == AdaptScreenWidthTypeAll);
+        BOOL adaptFontSize = ((type & QYHAdaptScreenWidthTypeFontSize) || type == QYHAdaptScreenWidthTypeAll);
         
         // 是否对圆角大小进行等比例
-        BOOL adaptCornerRadius = ((type & AdaptScreenWidthTypeCornerRadius) || type == AdaptScreenWidthTypeAll);
+        BOOL adaptCornerRadius = ((type & QYHAdaptScreenWidthTypeCornerRadius) || type == QYHAdaptScreenWidthTypeAll);
         
         // 约束
         if (adaptConstraint) {

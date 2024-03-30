@@ -56,7 +56,7 @@
 }
 
 + (UIColor *)colorGradientChangeWithSize:(CGSize)size
-                               direction:(IHGradientChangeDirection)direction
+                               direction:(QYHGradientChangeDirection)direction
                               startColor:(UIColor *)startcolor
                                 endColor:(UIColor *)endColor {
     
@@ -68,23 +68,23 @@
     gradientLayer.frame = CGRectMake(0, 0, size.width, size.height);
     
     CGPoint startPoint = CGPointZero;
-    if (direction == IHGradientChangeDirectionDownDiagonalLine) {
+    if (direction == QYHGradientChangeDirectionDownDiagonalLine) {
         startPoint = CGPointMake(0.0, 1.0);
     }
     gradientLayer.startPoint = startPoint;
     
     CGPoint endPoint = CGPointZero;
     switch (direction) {
-        case IHGradientChangeDirectionLevel:
+        case QYHGradientChangeDirectionLevel:
             endPoint = CGPointMake(1.0, 0.0);
             break;
-        case IHGradientChangeDirectionVertical:
+        case QYHGradientChangeDirectionVertical:
             endPoint = CGPointMake(0.0, 1.0);
             break;
-        case IHGradientChangeDirectionUpwardDiagonalLine:
+        case QYHGradientChangeDirectionUpwardDiagonalLine:
             endPoint = CGPointMake(1.0, 1.0);
             break;
-        case IHGradientChangeDirectionDownDiagonalLine:
+        case QYHGradientChangeDirectionDownDiagonalLine:
             endPoint = CGPointMake(1.0, 0.0);
             break;
         default:
@@ -93,6 +93,13 @@
     gradientLayer.endPoint = endPoint;
     
     gradientLayer.colors = @[(__bridge id)startcolor.CGColor, (__bridge id)endColor.CGColor];
+    
+    if (size.width == 0) {
+        size.width = 1;
+    }
+    if (size.height == 0) {
+        size.height = 1;
+    }
     UIGraphicsBeginImageContext(size);
     [gradientLayer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage*image = UIGraphicsGetImageFromCurrentImageContext();

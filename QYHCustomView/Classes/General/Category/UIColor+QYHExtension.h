@@ -10,17 +10,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSInteger, IHGradientChangeDirection) {
-    IHGradientChangeDirectionLevel,
-    IHGradientChangeDirectionVertical,
-    IHGradientChangeDirectionUpwardDiagonalLine,
-    IHGradientChangeDirectionDownDiagonalLine,
+typedef NS_ENUM(NSInteger, QYHGradientChangeDirection) {
+    QYHGradientChangeDirectionLevel,
+    QYHGradientChangeDirectionVertical,
+    QYHGradientChangeDirectionUpwardDiagonalLine,
+    QYHGradientChangeDirectionDownDiagonalLine,
 };
 
 @interface UIColor (QYHExtension)
 + (UIColor *)colorWithHexString:(NSString *)color alpha:(CGFloat)alpha;
 + (UIColor *)colorGradientChangeWithSize:(CGSize)size
-                               direction:(IHGradientChangeDirection)direction
+                               direction:(QYHGradientChangeDirection)direction
                               startColor:(UIColor *)startcolor
                                 endColor:(UIColor *)endColor;
 @end

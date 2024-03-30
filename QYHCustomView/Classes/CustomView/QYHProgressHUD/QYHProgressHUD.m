@@ -7,6 +7,7 @@
 //
 
 #import "QYHProgressHUD.h"
+#import "QYHHeader.h"
 
 #define QYHScreen_width [[UIScreen mainScreen] bounds].size.width
 #define QYHAdaptionWidth(width) (width*((QYHScreen_width/375.0>1.8)?1.8:(QYHScreen_width/375.0)))
@@ -33,6 +34,7 @@
     hud.removeFromSuperViewOnHide = YES;
     hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
     hud.bezelView.backgroundColor = [UIColor clearColor];
+    hud.userInteractionEnabled = NO;
     
     return hud;
 }
@@ -79,8 +81,9 @@
         hud.mode = MBProgressHUDModeCustomView;
     }
     
+    hud.userInteractionEnabled = NO;
     hud.removeFromSuperViewOnHide = YES;
-    [hud hideAnimated:YES afterDelay:2.5];
+    [hud hideAnimated:YES afterDelay:3.5];
     
     return hud;
 }
@@ -102,6 +105,7 @@
         hud.detailsLabel.font = [UIFont systemFontOfSize:fonSize];
     }
     
+    hud.userInteractionEnabled = NO;
     hud.mode = progressHUDMode;
     hud.removeFromSuperViewOnHide = YES;
     

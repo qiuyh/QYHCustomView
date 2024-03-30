@@ -21,6 +21,12 @@
     rotatedSize.width = width;
     rotatedSize.height = height;
     
+    if (rotatedSize.width == 0) {
+        rotatedSize.width = 1;
+    }
+    if (rotatedSize.height == 0) {
+        rotatedSize.height = 1;
+    }
     UIGraphicsBeginImageContext(rotatedSize);
     CGContextRef bitmap = UIGraphicsGetCurrentContext();
     CGContextTranslateCTM(bitmap, rotatedSize.width/2, rotatedSize.height/2);
@@ -86,6 +92,12 @@
         }
     }
     
+    if (size.width == 0) {
+        size.width = 1;
+    }
+    if (size.height == 0) {
+        size.height = 1;
+    }
     UIGraphicsBeginImageContext(size);
     
     CGRect thumbnailRect = CGRectZero;
@@ -152,6 +164,13 @@
 }
 - (UIImage *)imageWithImage:(UIImage *)image
                scaledToSize:(CGSize)newSize{
+    
+    if (newSize.width == 0) {
+        newSize.width = 1;
+    }
+    if (newSize.height == 0) {
+        newSize.height = 1;
+    }
     UIGraphicsBeginImageContext(newSize);
     [image drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
     UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
@@ -269,6 +288,12 @@
         NSLog(@"Ratio = %.1f", ratio);
         CGSize size = CGSizeMake((NSUInteger)(resultImage.size.width * sqrtf(ratio)),
                                  (NSUInteger)(resultImage.size.height * sqrtf(ratio))); // Use NSUInteger to prevent white blank
+        if (size.width == 0) {
+            size.width = 1;
+        }
+        if (size.height == 0) {
+            size.height = 1;
+        }
         UIGraphicsBeginImageContext(size);
         [resultImage drawInRect:CGRectMake(0, 0, size.width, size.height)];
         resultImage = UIGraphicsGetImageFromCurrentImageContext();
@@ -281,7 +306,14 @@
 }
 
 + (UIImage*)maskImage:(UIImage*)originImage toPath:(UIBezierPath*)path{
-    UIGraphicsBeginImageContextWithOptions(originImage.size, NO, 0);
+    CGSize size = originImage.size;
+    if (size.width == 0) {
+        size.width = 1;
+    }
+    if (size.height == 0) {
+        size.height = 1;
+    }
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0);
     [path addClip];
     [originImage drawAtPoint:CGPointZero];
     UIImage* img = UIGraphicsGetImageFromCurrentImageContext();
@@ -458,7 +490,14 @@
             
     }
     
-    UIGraphicsBeginImageContext(bounds.size);
+    CGSize size = bounds.size;
+    if (size.width == 0) {
+        size.width = 1;
+    }
+    if (size.height == 0) {
+        size.height = 1;
+    }
+    UIGraphicsBeginImageContext(size);
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     
@@ -659,7 +698,15 @@
         scrollView.frame = CGRectMake(0, 0, width, height);
         //下面方法，第一个参数表示区域大小。第二个参数表示是否是非透明的。
         //如果需要显示半透明效果，需要传NO，否则传YES。第三个参数就是屏幕密度了，调整清晰度。
-        UIGraphicsBeginImageContextWithOptions(scrollView.frame.size, NO, 0);
+        
+        CGSize size = scrollView.frame.size;
+        if (size.width == 0) {
+            size.width = 1;
+        }
+        if (size.height == 0) {
+            size.height = 1;
+        }
+        UIGraphicsBeginImageContextWithOptions(size, NO, 0);
         [scrollView.layer renderInContext: UIGraphicsGetCurrentContext()];
         image = UIGraphicsGetImageFromCurrentImageContext();
         //还原
@@ -674,7 +721,14 @@
     
     //下面方法，第一个参数表示区域大小。第二个参数表示是否是非透明的。
     //如果需要显示半透明效果，需要传NO，否则传YES。第三个参数就是屏幕密度了，调整清晰度。
-    UIGraphicsBeginImageContextWithOptions(view.frame.size, NO, 0);
+    CGSize size = view.frame.size;
+    if (size.width == 0) {
+        size.width = 1;
+    }
+    if (size.height == 0) {
+        size.height = 1;
+    }
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0);
     [view.layer renderInContext: UIGraphicsGetCurrentContext()];
     image = UIGraphicsGetImageFromCurrentImageContext();
     //还原

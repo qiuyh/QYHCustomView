@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QYHCustomView'
-  s.version          = '0.1.7'
+  s.version          = '0.1.8'
   s.summary          = '各种自定义view，ProgressHUD & AlertView'
   s.description      = '各种自定义view，ProgressHUD & AlertView'
   s.homepage         = 'https://github.com/qiuyh/QYHCustomView'
